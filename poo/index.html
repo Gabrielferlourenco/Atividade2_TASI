@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            background-color: aqua;
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .quiz-container {
+            background-color: beige;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: 1rem auto;
+            padding: 1rem;
+            height: 30rem;
+            width: 25rem;
+            border: 4px solid black;
+        }
+
+        .quiz-container-resposta {
+            background-color: beige;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: 1rem auto;
+            padding: 1rem;
+            height: 10rem;
+            width: 25rem;
+            border: 4px solid black;
+        }
+
+        #btn-container {
+            background-color: beige;
+            display: flex;
+            flex-wrap: wrap;
+            
+            align-items: center;
+            margin: 1rem auto;
+            padding: .5rem;
+            height: fit-content;
+            width: 25rem;
+            border: 4px solid black;
+
+        }
+
+        #respostas{
+            display: none;
+        }
+
+        button {
+            display: flex;
+            margin: 0 auto;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Quiz sobre POO</h1>
+
+    <div class="quiz-container">
+        <h2>1- O que é encapsulamento? </h2>
+        <p> A- É o processo de ocultar os detalhes de implementação de uma classe e exibir apenas as operações permitidas para interação externa.  </p><input type="radio" name="question1" value="a">
+        <p> B- É o processo de herança de propriedades e comportamentos de uma classe para outra. </p><input type="radio" name="question1" id="b">
+        <p> C- É a capacidade de uma classe acessar diretamente os membros privados de outra classe.</p><input type="radio" name="question1" id="c">
+        <p> D- É o processo de dividir uma classe em várias subclasses para facilitar a manutenção do código</p><input type="radio" name="question1" id="d">
+    </div>
+
+    <div class="quiz-container">
+        <h2>2 - Qual é o conceito correto de polimorfismo?</h2>
+        <p>A - Polimorfismo refere-se à capacidade de uma classe herdar propriedades e comportamentos de outra classe. </p><input type="radio" name="question2" value="a">
+        <p>B - Polimorfismo é a capacidade de uma classe acessar diretamente os membros privados de outra classe.</p><input type="radio" name="question2" value="b">
+        <p>C - Polimorfismo é a capacidade de objetos de diferentes classes responderem ao mesmo método de maneira diferente.</p><input type="radio" name="question2" value="c">
+        <p>D - Polimorfismo é o processo de ocultar os detalhes de implementação de uma classe e exibir apenas as operações permitidas para interação externa. </p><input type="radio" name="question2" id="d">
+    </div>
+
+    <div class="quiz-container">
+        <h2>3 - Qual é a descrição correta de uma interface?</h2>
+        <p>A - Uma interface define um conjunto de métodos que uma classe deve implementar. Ela fornece um contrato para garantir que determinados comportamentos sejam fornecidos por todas as classes que a implementam.</p><input type="radio" name="question3" value="a">
+        <p>B - Uma interface é uma classe abstrata que pode ser instanciada diretamente.</p><input type="radio" name="question3" id="b2">
+        <p>C - Uma interface é uma classe que herda propriedades e comportamentos de outra classe. </p><input type="radio" name="question3" id="b3">
+        <p>D - Uma interface é usada para ocultar os detalhes de implementação de uma classe e exibir apenas as operações permitidas para interação externa. </p><input type="radio" name="question3" id="b4">
+    </div>
+
+    <div id="btn-container">
+        <button id="btn"> Mostrar </button>
+        <button id="ocultar">Ocultar</button>
+    </div>
+
+    <div id="respostas" class="quiz-container-resposta">
+        <h2>Respostas</h2>
+        <p>Exercício 1 - Alternativa A</p>
+        <p>Exercício 2 - Alternativa C</p>
+        <p>Exercício 3 - Alternativa A</p>
+    </div>
+
+</body>
+
+
+<script>
+    const btn = document.querySelector("#btn");
+    const respostas = document.querySelector('#respostas');
+    const btnOcultar = document.querySelector('#ocultar');
+
+    function mostrarRespostas() {
+        respostas.style.display = "block";
+    }
+
+    function ocultarRespostas() {
+        respostas.style.display = "none";
+    }
+
+    btn.addEventListener('click', mostrarRespostas);
+    btnOcultar.addEventListener('click', ocultarRespostas);
+
+
+</script>
+
+</html>

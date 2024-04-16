@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .quiz-container {
+            background-color: beige;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: 1rem auto;
+            padding: 1rem;
+            height: 20rem;
+            width: 25rem;
+            border: 4px solid black;
+        }
+
+        .quiz-container-resposta {
+            background-color: beige;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: 1rem auto;
+            padding: 1rem;
+            height: 10rem;
+            width: 25rem;
+            border: 4px solid black;
+        }
+
+        #btn-container {
+            background-color: beige;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            margin: 1rem auto;
+            padding: .5rem;
+            height: fit-content;
+            width: 25rem;
+            border: 4px solid black;
+
+        }
+
+        #respostas {
+            display: none;
+        }
+
+        button {
+            display: flex;
+            margin: 0 auto;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Quiz sobre HTML, CSS e JavaScript</h1>
+
+    <div class="quiz-container">
+        <h2>1- O que significa HTML? </h2>
+        <p> A- HyperText Markup Language </p><input type="radio" name="question1" value="a">
+        <p> B- Hyperlink and Text Markup Language </p><input type="radio" name="question1" id="b">
+        <p> C- Hyper Text Manipulation Language </p><input type="radio" name="question1" id="c">
+        <p> D- Hyper Transfer Markup Language </p><input type="radio" name="question1" id="d">
+    </div>
+
+    <div class="quiz-container">
+        <h2>2 - Qual a função do CSS?</h2>
+        <p>A - Conectar a página web ao servidor </p><input type="radio" name="question2" value="a">
+        <p>B - Estilizar a página web </p><input type="radio" name="question2" value="b">
+        <p>C - Definir o comportamento dinânico de uma app web </p><input type="radio" name="question2" value="c">
+        <p>D - Manipular dados em um banco de dados </p><input type="radio" name="question2" id="d">
+    </div>
+
+    <div class="quiz-container">
+        <h2>3 - Qual a função do JavaScript?</h2>
+        <p>A - Definir estilos e layout da página</p><input type="radio" name="question3" value="a">
+        <p>B - Manipular a estrutura do documento HTML</p><input type="radio" name="question3" id="b2">
+        <p>C - Realizar cálculos matemáticos no lado do servidor </p><input type="radio" name="question3" id="b3">
+        <p>D - Adicionar interatividade e comportamento dinâmico </p><input type="radio" name="question3" id="b4">
+    </div>
+
+    <div id="btn-container">
+        <button id="btn"> Mostrar </button>
+        <button id="btnOcultar">Ocultar</button>
+    </div>
+
+    <div id="respostas" class="quiz-container-resposta">
+        <h2>Respostas</h2>
+        <p>Exercício 1 - Alternativa A</p>
+        <p>Exercício 2 - Alternativa B</p>
+        <p>Exercício 3 - Alternativa D</p>
+    </div>
+
+</body>
+
+
+<script>
+    const respostas = document.querySelector('#respostas');
+    const btn = document.querySelector("#btn");
+    const btnO = document.querySelector("#btnOcultar");
+
+
+    function mostrarRespostas() {
+        respostas.style.display = "block";
+    }
+    function ocultarRespostas() {
+        respostas.style.display = "none";
+    }
+
+    btn.addEventListener('click', mostrarRespostas);
+    btnO.addEventListener('click', ocultarRespostas);
+
+</script>
+
+</html>
